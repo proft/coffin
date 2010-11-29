@@ -58,6 +58,13 @@ Simply use the ``render_to_response`` replacement provided by coffin::
 This will render ``template.html`` using Jinja2, and returns a
 ``HttpResponse``.
 
+Or with new decorator::
+
+    from coffin.decorators import render_to
+
+    @render_to('list_posts.html')
+    def list_posts(request}:
+        return {'posts': 1}
 
 404 and 500 handlers
 ====================
